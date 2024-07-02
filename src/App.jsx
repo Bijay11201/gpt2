@@ -1,5 +1,5 @@
 import { ChatContextProvider } from './context/chatContext';
-import SideBar from './components/Sidebar';
+import SideBar from './components/SideBar';
 import ChatView from './components/ChatView';
 import { useEffect, useState } from 'react';
 import Modal from './components/Modal';
