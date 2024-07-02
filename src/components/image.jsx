@@ -1,13 +1,25 @@
 import PropTypes from 'prop-types';
-const Image=(props)=>{
-    return(<>
-        <img
-          className='bg-cover rounded-lg shadow-lg'
-          src={props.url}
-          alt='dalle generated picture'
-          loading='lazy'
-        />
-      </>);
+
+/**
+ * A component that displays an image.
+ *
+ * @param {string} text - The source of the image to display.
+ * @returns {JSX.Element} - A JSX element representing the image.
+ */
+const Image = (props) => {
+  return (
+    <>
+      <img
+        className='bg-cover rounded-lg shadow-lg'
+        src={props.url}
+        alt='dalle generated picture'
+        loading='lazy'
+      />
+    </>
+  );
 };
+
 export default Image;
-Image.propTypes={url:PropTypes.string.isRequired,};
+Image.propTypes = {
+  url: PropTypes.string.isRequired,
+};

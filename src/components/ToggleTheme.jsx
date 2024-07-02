@@ -1,9 +1,19 @@
 import PropTypes from 'prop-types';
 import useDarkMode from '../hooks/useDarkMode';
 import { MdOutlineNightlight, MdOutlineWbSunny } from 'react-icons/md';
+
+/**
+ * A toggle for switching between light and dark modes.
+ *
+ * @param {Object} props - The properties for the component.
+ * @param {boolean} props.open - Whether the sidebar is open or not.
+ */
 const ToggleTheme = (props) => {
   const [theme, setTheme] = useDarkMode();
 
+  /**
+   * Toggles the dark mode.
+   */
   const handleToggle = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };

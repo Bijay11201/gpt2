@@ -1,18 +1,20 @@
-import ChatcontextProvider from "./context/ChatContext"
-import Sidebar from './components/SideBar'
-import ChatView from "./components/chatView"
-import {useEffect ,useState} from 'react'
-import Modal from './components/Modal'
-import Settings from './components/Setting'
-const App =()=>{
-    const [modalOpen ,setModalOpen]=useState(false);
-    useEffect(()=>{
-        const apiKey = window.localStorage.getItem('api-key');
-        if(!apiKey){
-            setModalOpen(true);
-        }
-    },[]);
-return (
+import { ChatContextProvider } from './context/chatContext';
+import SideBar from './components/SideBar';
+import ChatView from './components/ChatView';
+import { useEffect, useState } from 'react';
+import Modal from './components/Modal';
+import Setting from './components/Setting';
+
+const App = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  useEffect(() => {
+    const apiKey = window.localStorage.getItem('api-key');
+    if (!apiKey) {
+      setModalOpen(true);
+    }
+  }, []);
+  return (
     <ChatContextProvider>
       <Modal title='Setting' modalOpen={modalOpen} setModalOpen={setModalOpen}>
         <Setting modalOpen={modalOpen} setModalOpen={setModalOpen} />
@@ -24,4 +26,5 @@ return (
     </ChatContextProvider>
   );
 };
+
 export default App;

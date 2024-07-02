@@ -9,10 +9,16 @@ import {
 import { AiOutlineGithub } from 'react-icons/ai';
 import { ChatContext } from '../context/chatContext';
 import bot from '../assets/logo.svg';
-import ToggleTheme from './Toogletheme';
+import ToggleTheme from './ToggleTheme';
 import Modal from './Modal';
 import Setting from './Setting';
 
+/**
+ * A sidebar component that displays a list of nav items and a toggle
+ * for switching between light and dark modes.
+ *
+ * @param {Object} props - The properties for the component.
+ */
 const SideBar = () => {
   const [open, setOpen] = useState(true);
   const [, , clearChat] = useContext(ChatContext);
