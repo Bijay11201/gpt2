@@ -1,11 +1,6 @@
 import PropTypes from 'prop-types';
 
-/**
- * A component that displays an image.
- *
- * @param {string} text - The source of the image to display.
- * @returns {JSX.Element} - A JSX element representing the image.
- */
+
 const Image = (props) => {
   return (
     <>

@@ -4,11 +4,7 @@ import moment from 'moment';
 import Image from './Image';
 import Markdown from './Markdown';
 
-/**
- * A chat message component that displays a message with a timestamp and an icon.
- *
- * @param {Object} props - The properties for the component.
- */
+
 const Message = (props) => {
   const { id, createdAt, text, ai = false, selected } = props.message;
 
