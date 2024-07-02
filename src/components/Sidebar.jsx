@@ -65,7 +65,7 @@ const SideBar = () => {
         </li>
         <li>
           <a
-            href='https://www.buymeacoffee.com/eyuel'
+            href='#'
             rel='noreferrer'
             target='_blank'>
             <MdOutlineCoffee size={15} />
@@ -76,7 +76,7 @@ const SideBar = () => {
           <a
             rel='noreferrer'
             target='_blank'
-            href='https://github.com/EyuCoder/chatgpt-clone'>
+            href='#'>
             <AiOutlineGithub size={15} />
             <p className={`${!open && 'hidden'}`}>Github</p>
           </a>
